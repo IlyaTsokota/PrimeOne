@@ -1,0 +1,23 @@
+@import "base/variables";
+@import "base/nullstyle";
+@import "base/mixins";
+@import "base/media_mixin";
+@import "base/flex_helper";
+@import "base/fonts";
+
+* {
+	font-family: $main-font;
+}
+
+.container {
+	position: relative;
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+@import "blocks/promo";
+@import "blocks/header";
+@import "blocks/buttons";
+@import "blocks/title";
+@import "blocks/footer";

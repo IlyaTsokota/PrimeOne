@@ -1,0 +1,113 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin df {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+// Блочный элемент по центру
+@mixin push--auto {
+	margin: {
+		left: auto;
+		right: auto;
+	}
+}
+
+// Для before, after
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+@mixin border-radius($topLeft, $topRight, $bottomRight, $bottomLeft) {
+	-webkit-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+	-moz-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+	-ms-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+	-o-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+	border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+}
+
+@mixin box-shadow($horizOffset, $vertOffset, $blur, $color) {
+	-webkit-box-shadow: $horizOffset $vertOffset $blur $color;
+	-moz-box-shadow: $horizOffset $vertOffset $blur $color;
+	-ms-box-shadow: $horizOffset $vertOffset $blur $color;
+	-o-box-shadow: $horizOffset $vertOffset $blur $color;
+	box-shadow: $horizOffset $vertOffset $blur $color;
+	border-collapse: separate;
+}
+
+@mixin box-shadow-inset($horizOffset, $vertOffset, $blur, $color) {
+	-webkit-box-shadow: $horizOffset $vertOffset $blur $color inset;
+	-moz-box-shadow: $horizOffset $vertOffset $blur $color inset;
+	-ms-box-shadow: $horizOffset $vertOffset $blur $color inset;
+	-o-box-shadow: $horizOffset $vertOffset $blur $color inset;
+	box-shadow: $horizOffset $vertOffset $blur $color inset;
+}
+
+@mixin background-clip {
+	background-clip: padding-box;
+}
+
+@mixin background-gradient($direction, $first-color, $second-color) {
+	background: $first-color;
+	background-image: -webkit-linear-gradient($direction, $first-color, $second-color);
+	background-image: -moz-linear-gradient($direction, $first-color, $second-color);
+	background-image: -ms-linear-gradient($direction, $first-color, $second-color);
+	background-image: -o-linear-gradient($direction, $first-color, $second-color);
+	background-image: linear-gradient($direction, $first-color, $second-color);
+	@include background-clip;
+}
+
+// Цвет  placeholder в input @import phcolor;
+@mixin phcolor($plcolor) {
+	&::-webkit-input-placeholder {
+		color: $plcolor;
+	}
+	&:-moz-placeholder {
+		color: $plcolor;
+	}
+	&::-moz-placeholder {
+		color: $plcolor;
+	}
+	&:-ms-input-placeholder {
+		color: $plcolor;
+	}
+}
+
+// Сделать черно-белым
+@mixin gr {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+}
+
+// Снова цветным
+@mixin grh {
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-ms-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	filter: grayscale(0%);
+	filter: none;
+}

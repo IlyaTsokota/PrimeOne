@@ -8,11 +8,13 @@
 }
 
 .row {
+	@include df;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 
 .column {
+	@include df;
 	flex-direction: column;
 }
 

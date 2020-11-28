@@ -28,7 +28,7 @@ const dir = {
 	src: {
 		html: srcDir + '/*.html',
 		sass: srcDir + '/scss/**/*.+(scss|sass|css)',
-		js: srcDir + '/js/*.js',
+		js: srcDir + '/js/**/*.js',
 		fonts: srcDir + '/fonts/**/*',
 		img: srcDir + '/img/**/*',
 		icons: srcDir + '/icons/**/*',

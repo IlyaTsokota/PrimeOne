@@ -1,0 +1,222 @@
+.header {
+	padding: 29px 0 34px;
+}
+.header-top {
+	text-transform: uppercase;
+	&__item {
+		color: #000;
+		display: block;
+		line-height: 19px;
+		font-size: 10px;
+		font-family: "Bebas";
+		letter-spacing: 1px;
+		margin: 0 12px 0 0;
+		padding: 0 4px;
+		&--active {
+			color: #fff;
+			width: 19px;
+			height: 19px;
+			background-color: #000;
+		}
+	}
+
+	&__link {
+		position: relative;
+		z-index: 11;
+		color: #000;
+		font-family: "AkzidenzGroteskBQ";
+		font-size: 15px;
+		text-decoration: underline;
+		@include _480 {
+			font-size: 12px;
+		}
+	}
+	@include _768 {
+		justify-content: flex-end;
+	}
+}
+
+.header-bottom {
+	&__menu {
+		margin-top: 32px;
+		@include _768 {
+			margin-top: 0;
+		}
+	}
+	&__column {
+		flex: 0 0 33.333%;
+	}
+	&__list {
+		& > li {
+			margin: 0 45px 0 0;
+			&:last-child {
+				margin: 0;
+			}
+			@include _992 {
+				margin: 0 20px 0 0;
+			}
+			@include _768 {
+				margin: 0;
+				&:first-child {
+					margin-top: 20px;
+				}
+				& > a {
+					display: block;
+					width: 100%;
+					height: 30px;
+				}
+			}
+		}
+		&--right {
+			justify-content: flex-end;
+			& > li {
+				margin: 0 0 0 45px;
+				&:first-child {
+					margin: 0;
+				}
+				&:last-child {
+					margin: 0 0 0 45px;
+				}
+				@include _992 {
+					margin: 0 0 0 20px;
+					&:last-child {
+						margin: 0 0 0 20px;
+					}
+				}
+				@include _768 {
+					margin: 0;
+					&:first-child {
+						margin-top: 0px;
+					}
+					&:last-child {
+						margin: 0;
+					}
+				}
+			}
+			@include _768 {
+				justify-content: start;
+			}
+		}
+		@include _768 {
+			flex-direction: column;
+		}
+	}
+
+	&__link {
+		color: #000;
+		font-family: "AkzidenzGroteskBQ";
+		font-size: 15px;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+	}
+}
+.header-logo {
+	position: relative;
+	z-index: 11;
+	margin: -13px 0 0 0;
+	align-items: center;
+	&__text {
+		color: #000;
+		font-family: "Bebas";
+		font-size: 8px;
+		text-transform: uppercase;
+		letter-spacing: 8px;
+		&:first-child {
+			margin-bottom: 14px;
+		}
+		&:last-child {
+			margin-top: -12px;
+		}
+		@include _480 {
+			font-size: 7px;
+		}
+	}
+
+	&__img {
+		display: inline-block;
+		height: 89px;
+	}
+	@include _768 {
+		margin-top: -25px;
+		height: 80px;
+		&__img {
+			img {
+				width: 150px;
+			}
+		}
+	}
+	@include _480 {
+		height: 60px;
+		&__img {
+			img {
+				width: 110px;
+			}
+		}
+	}
+}
+
+.header-menu__icon {
+	display: none;
+}
+@include _768 {
+	.header-menu__icon {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 10px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+
+		span {
+			top: 8px;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			transition: all 0.6s;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&--active {
+			span {
+				&:first-child {
+					transform: rotate(-45deg);
+					top: 8px;
+				}
+				&:first-child + span {
+					width: 0;
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: 8px;
+				}
+			}
+		}
+	}
+}
+
+.header-menu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	left: -120%;
+	top: 0;
+	background-color: #fff;
+	padding: 120px 10px 10px 20px;
+	transition: all 0.6s;
+	@include _480 {
+		padding-top: 90px;
+	}
+	&--active {
+		left: 0;
+	}
+}

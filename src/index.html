@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Ilya Tsokota">
 	@@include('views/_title.html',{
-	"name": "Main page"
+	"name": "PrimeOne"
 	})
 	@@include('views/_links.html')
 </head>
@@ -17,7 +17,183 @@
 	@@include('views/_header.html')
 
 	<main>
+		<section class="promo flex-container">
+			<div class="promo__column">
+				<div class="promo__img"><img src="img/bg/1.png" alt="snack"></div>
+			</div>
+			<div class="promo__column">
+				<div class="promo__content">
+					<h1 class="title">Private <br /> catering</h1>
+					<p class="promo__text">
+						Treat your guests to a beautifully plated dinner, hand-crafted canapes or a casual BBQ.
+					</p>
+					<div class="promo__nav flex-container">
+						<a href="#" class="button">Get a quote</a>
+						<a href="#" class="promo__link link">View menus</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="menu">
+			<div class="container container--wrap">
+				<div class="menu__items flex-container">
+					<div class="menu__item column">
+						<div class="menu__img"><img src="img/menu/1.png" alt="eat"></div>
+						<h2 class="menu__title subtitle">Corporate <br />catering</h2>
+						<div class="menu__desc">
+							We are able to serve events from 2 to 2000 guests and always reasonable prices.
+						</div>
+						<a href="#" class="menu__btn button button--black">Get a quote</a>
+						<a href="#" class="menu__link link link--black">View menus</a>
+					</div>
+					<div class="menu__item column">
+						<div class="menu__img"><img src="img/menu/2.png" alt="eat"></div>
+						<h2 class="menu__title subtitle">Private<br />catering</h2>
+						<div class="menu__desc">
+							Fresh, seasonal and simple
+							cuisine. Food is our business and our passion.
+						</div>
+						<a href="#" class="menu__btn button button--black">Get a quote</a>
+						<a href="#" class="menu__link link link--black">View menus</a>
+					</div>
+					<div class="menu__item column">
+						<div class="menu__img"><img src="img/menu/3.png" alt="eat"></div>
+						<h2 class="menu__title subtitle">Wedding<br />catering</h2>
+						<div class="menu__desc">
+							We use only the best organic ingredients and gluten and dairy free cooking.
+						</div>
+						<a href="#" class="menu__btn button button--black">Get a quote</a>
+						<a href="#" class="menu__link link link--black">View menus</a>
+					</div>
+					<div class="menu__item column">
+						<div class="menu__img"><img src="img/menu/4.png" alt="eat"></div>
+						<h2 class="menu__title subtitle">Online<br />Ordering</h2>
+						<div class="menu__desc">
+							Successful catering is about organisation, high quality
+							service, and great food.
+						</div>
+						<a href="#" class="menu__btn button button--black">Get a quote</a>
+						<a href="#" class="menu__link link link--black">View menus</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="divider flex-container">
+			<div class="divider__item">
+				<h2 class="divider__title title">Why CHOOSE us?</h2>
+			</div>
+			<div class="divider__item">
+				<div class="divider__img">
+					<img src="img/bg/2.png" alt="fish">
+				</div>
+			</div>
+		</section>
+		<section class="excellence">
+			<div class="container">
+				<div class="excellence__items row">
+					<div class="excellence__item flex-container">
+						<div class="excellence__img fcenter">
+							<img src="icons/choose/1.svg" />
+						</div>
+						<div class="excellence__text">
+							<h2 class="excellence__title subtitle">Always fresh</h2>
+							<div class="excellence__desc">
+								Fresh, seasonal and simple cuisine. Food is our business and our passion.
+							</div>
+						</div>
+					</div>
+					<div class="excellence__item flex-container">
+						<div class="excellence__img fcenter">
+							<img src="icons/choose/2.svg" />
 
+						</div>
+						<div class="excellence__text">
+							<h2 class="excellence__title subtitle">Reliable AND Flawless</h2>
+							<div class="excellence__desc">
+								Successful catering is about organisation, high quality service, and great food.
+							</div>
+						</div>
+					</div>
+					<div class="excellence__item flex-container">
+						<div class="excellence__img fcenter">
+							<img src="icons/choose/3.svg" />
+
+						</div>
+						<div class="excellence__text">
+							<h2 class="excellence__title subtitle">Clean and Healthy</h2>
+							<div class="excellence__desc">
+								We use only the best organic ingredients and gluten and dairy free cooking.
+							</div>
+						</div>
+					</div>
+					<div class="excellence__item flex-container">
+						<div class="excellence__img fcenter">
+							<img src="icons/choose/4.svg" />
+						</div>
+						<div class="excellence__text">
+							<h2 class="excellence__title subtitle">fits any size and budget</h2>
+							<div class="excellence__desc">
+								We are able to serve events from 2 to 2000 guests and always at reasonable prices.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contact">
+			<div class="container">
+				<h2 class="contact__title title title--black">say hello</h2>
+				<div class="contact__items row">
+					<div class="contact__item flex-container">
+						<div class="contact__img">
+							<img src="icons/contacts/location.svg" />
+						</div>
+						<div class="contact__text">45-35 #B 39th St, Sunnyside, NY 11104</div>
+					</div>
+					<div class="contact__item flex-container">
+						<div class="contact__img">
+							<img src="icons/contacts/email.svg" />
+						</div>
+						<a href="mailto:contact@primeone.com" class="contact__link">contact@primeone.com</a>
+					</div>
+					<div class="contact__item flex-container">
+						<div class="contact__img">
+							<img src="icons/contacts/telephone.svg" />
+
+						</div>
+						<a href="tel:+7187777777" class="contact__link">(718) 777-7777</a>
+					</div>
+					<div class="contact__item">
+						<div class="contact__socials flex-container">
+							<a href="" class="contact__social"><i></i></a>
+							<a href="" class="contact__social"><i></i></a>
+							<a href="" class="contact__social"><i></i></a>
+							<a href="" class="contact__social"><i></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="connection">
+			<div class="connection__items flex-container">
+				<div class="connection__item">
+					<iframe class="connection__map"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.877368529743!2d-73.92830508462927!3d40.74272384367237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25ed73a204cf7%3A0x42e7ba682f9a9e74!2zNDUtMzUgMzl0aCBTdCwgUXVlZW5zLCBOWSAxMTEwNCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1607030843457!5m2!1sru!2sua"
+						allowfullscreen="" aria-hidden="false"></iframe>
+				</div>
+				<div class="connection__item">
+					<div class="connection__block">
+						<h2 class="connection__title subtitle subtitle--white">get in touch</h2>
+						<form class="form column">
+							<input type="text" name="name" placeholder="Name" />
+							<input type="text" name=" email" placeholder="E-mail or phone number" />
+							<textarea name="message" placeholder="Your message"></textarea>
+							<button class="form__button button">Send message</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 
 	@@include('views/_footer.html')

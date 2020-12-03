@@ -1,0 +1,43 @@
+.divider {
+	height: 150px;
+	background-color: #000000;
+	@include _768 {
+		height: auto;
+	}
+	&__item {
+		flex: 0 0 50%;
+		position: relative;
+		&:last-child {
+			@include _768 {
+				display: none;
+			}
+		}
+		@include _768 {
+			flex: 0 0 100%;
+		}
+	}
+	&__title {
+		text-align: right;
+		margin: 55px 65px 0 15px;
+		@include _992 {
+			margin-right: 40px;
+		}
+		@include _768 {
+			text-align: center;
+			margin: 20px 0;
+		}
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

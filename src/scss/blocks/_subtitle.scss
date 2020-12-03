@@ -1,0 +1,15 @@
+.subtitle {
+	font-family: "AkzidenzGroteskBQ";
+	line-height: 1;
+	letter-spacing: 2.5px;
+	text-align: left;
+	color: #000000;
+	text-transform: uppercase;
+	@include adaptiv-font(25, 21);
+	@media (min-width: 1992px) {
+		font-size: 25px;
+	}
+	&--white {
+		color: #fff;
+	}
+}

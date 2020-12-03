@@ -1,0 +1,41 @@
+.footer {
+	&__content {
+		min-height: 125px;
+		display: flex;
+		align-items: center;
+		@include _576 {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&__text {
+		font-size: 15px;
+		text-align: left;
+		color: #4d4d4d;
+		a {
+			color: #4d4d4d;
+			text-decoration: underline;
+		}
+		@include _576 {
+			order: 1;
+			margin-top: 10px;
+			font-size: 12px;
+		}
+	}
+
+	&__logo {
+		display: block;
+		margin: 0 0 0 auto;
+		width: 156px;
+		height: 39px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+		@include _576 {
+			order: 0;
+			margin: 0;
+		}
+	}
+}

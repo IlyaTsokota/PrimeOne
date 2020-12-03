@@ -14,10 +14,23 @@
 	max-width: 900px;
 	padding: 0 15px;
 	margin: 0 auto;
+	&--wrap {
+		@include _992 {
+			max-width: 680px;
+		}
+	}
 }
 
 @import "blocks/promo";
 @import "blocks/header";
 @import "blocks/buttons";
 @import "blocks/title";
+@import "blocks/link";
+@import "blocks/menu";
+@import "blocks/subtitle";
+@import "blocks/divider";
+@import "blocks/excellence";
+@import "blocks/contact";
+@import "blocks/connection";
+@import "blocks/form";
 @import "blocks/footer";

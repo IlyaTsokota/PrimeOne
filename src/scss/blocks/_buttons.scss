@@ -1,0 +1,27 @@
+.button {
+	width: 155px;
+	height: 50px;
+	background-color: #ffffff;
+	line-height: 50px;
+	color: #000000;
+	font-family: $second-font;
+	font-size: 15px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	user-select: none;
+	transition: 0.5s all;
+	&:active {
+		@include box-shadow-inset(5px, 5px, 10px, #000);
+	}
+	&--black {
+		background-color: #000000;
+		color: #fff;
+		&:active {
+			@include box-shadow-inset(5px, 5px, 10px, #fff);
+		}
+	}
+	&:hover {
+		opacity: 0.6;
+	}
+}

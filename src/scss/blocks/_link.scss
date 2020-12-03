@@ -1,0 +1,12 @@
+.link {
+	color: #fffffe;
+	font-family: $second-font;
+	font-size: 15px;
+	text-align: left;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	&--black {
+		color: #000000;
+	}
+}

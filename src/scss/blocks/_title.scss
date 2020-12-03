@@ -1,0 +1,16 @@
+.title {
+	color: #ffffff;
+	@include adaptiv-font(50, 34);
+	font-weight: 400;
+	line-height: 50px;
+	text-align: left;
+	font-family: "AkzidenzGroteskBQ";
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	@media (min-width: 1992px) {
+		font-size: 50px;
+	}
+	&--black {
+		color: #000;
+	}
+}

@@ -1,3 +1,5 @@
+
+
 function responsive() {
 	window.addEventListener('resize', responsiveMenu, true);
 	function responsiveMenu() {
@@ -24,7 +26,9 @@ function responsive() {
 			}
 		}
 	}
+
 	responsiveMenu();
+
 }
 
 export default responsive;

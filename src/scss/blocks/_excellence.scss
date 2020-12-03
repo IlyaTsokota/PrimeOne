@@ -1,0 +1,67 @@
+.excellence {
+	min-height: 350px;
+	padding-bottom: 50px;
+	background-color: #ebebeb;
+	@include _576 {
+		padding-bottom: 20px;
+	}
+	&__items {
+		@include _992 {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		flex: 0 0 50%;
+		margin-top: 50px;
+		@include _992 {
+			flex: 0 0 70%;
+		}
+		@include _576 {
+			flex: 0 0 100%;
+			margin-top: 20px;
+		}
+		@include _480 {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__img {
+		min-width: 100px;
+		width: 100px;
+		height: 100px;
+		background-color: #000000;
+		margin-right: 10px;
+		img {
+			filter: brightness(0) invert(1);
+		}
+	}
+
+	&__text {
+		@include _480 {
+			margin-top: 10px;
+		}
+	}
+
+	&__title {
+		@include _480 {
+			text-align: center;
+		}
+	}
+	&__desc {
+		margin-top: 25px;
+		font-family: $main-font;
+		font-size: 15px;
+		line-height: 1.67;
+		text-align: left;
+		color: #000;
+		margin-right: 5px;
+		@include _480 {
+			text-align: justify;
+			margin-top: 10px;
+			text-align-last: center;
+		}
+	}
+}

@@ -8,7 +8,7 @@
 // import 'unfetch/polyfill';
 
 import isWebP from './modules/webp';
-import responsive from './modules/responsive-menu';
+import responsive from './modules/responsive';
 import burger from './modules/burger';
 
 window.addEventListener("DOMContentLoaded", () => {

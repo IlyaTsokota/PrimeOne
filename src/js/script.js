@@ -10,9 +10,33 @@
 import isWebP from './modules/webp';
 import responsive from './modules/responsive';
 import burger from './modules/burger';
+import sendMail from './modules/email';
+import { closeModalListener } from './modules/modal';
+import scrollUp from './modules/scrollUp';
+import { enableScroll, disableScroll } from './modules/scrollSwitcher';
 
-window.addEventListener("DOMContentLoaded", () => {
+disableScroll();
+
+window.addEventListener('load', () => {
+	history.pushState('', document.title, window.location.pathname);
+	const preloader = document.querySelector('.preloader');
+	setTimeout(() => {
+		start();
+		setTimeout(() => {
+			preloader.classList.remove('preloader--active');
+			enableScroll();
+			setTimeout(() => {
+				preloader.remove();
+			}, 800);
+		}, 200);
+	}, 300);
+});
+
+function start() {
 	isWebP();
 	responsive();
 	burger();
-});
+	closeModalListener('.modal');
+	sendMail('.form', '.loading');
+	scrollUp('.up');
+}

@@ -12,16 +12,22 @@
 	user-select: none;
 	transition: 0.5s all;
 	&:active {
-		@include box-shadow-inset(5px, 5px, 10px, #000);
+		@media (min-width: 768px) {
+			@include box-shadow-inset(5px, 5px, 10px, #000);
+		}
 	}
 	&--black {
 		background-color: #000000;
 		color: #fff;
 		&:active {
-			@include box-shadow-inset(5px, 5px, 10px, #fff);
+			@media (min-width: 768px) {
+				@include box-shadow-inset(5px, 5px, 10px, #fff);
+			}
 		}
 	}
 	&:hover {
-		opacity: 0.6;
+		@media (min-width: 768px) {
+			opacity: 0.6;
+		}
 	}
 }

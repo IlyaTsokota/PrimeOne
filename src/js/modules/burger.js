@@ -1,3 +1,5 @@
+import { enableScroll, disableScroll } from './scrollSwitcher';
+
 export default function burger() {
 	const button = document.querySelector('.header-menu__icon'),
 		menu = document.querySelector('.header-menu');
@@ -6,11 +8,11 @@ export default function burger() {
 		if (button.classList.contains('header-menu__icon--active') && menu.classList.contains('header-menu--active')) {
 			button.classList.remove('header-menu__icon--active');
 			menu.classList.remove('header-menu--active');
-			document.body.style.overflow = '';
+			enableScroll();
 		} else {
 			button.classList.add('header-menu__icon--active');
 			menu.classList.add('header-menu--active');
-			document.body.style.overflow = 'hidden';
+			disableScroll();
 		}
 	});
 }

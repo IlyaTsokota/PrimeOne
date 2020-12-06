@@ -4,6 +4,7 @@
 @import "base/media_mixin";
 @import "base/flex_helper";
 @import "base/fonts";
+@import "blocks/preloader";
 
 * {
 	font-family: $main-font;
@@ -20,7 +21,6 @@
 		}
 	}
 }
-
 @import "blocks/promo";
 @import "blocks/header";
 @import "blocks/buttons";
@@ -33,4 +33,7 @@
 @import "blocks/contact";
 @import "blocks/connection";
 @import "blocks/form";
+@import "blocks/modal";
 @import "blocks/footer";
+@import "blocks/spinner";
+@import "blocks/up";

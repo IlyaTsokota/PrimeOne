@@ -1,0 +1,29 @@
+.loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 40;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s;
+	&--active {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__spinner {
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		top: 50%;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		width: 100px;
+		height: 100px;
+		transform: translateY(-50%) scale(3);
+	}
+}

@@ -93,7 +93,7 @@
 				<div class="excellence__items row">
 					<div class="excellence__item flex-container">
 						<div class="excellence__img fcenter">
-							<img src="icons/choose/1.svg" />
+							<img src="icons/choose/1.svg" alt="choose1" />
 						</div>
 						<div class="excellence__text">
 							<h2 class="excellence__title subtitle">Always fresh</h2>
@@ -104,7 +104,7 @@
 					</div>
 					<div class="excellence__item flex-container">
 						<div class="excellence__img fcenter">
-							<img src="icons/choose/2.svg" />
+							<img src="icons/choose/2.svg" alt="choose2" />
 
 						</div>
 						<div class="excellence__text">
@@ -116,7 +116,7 @@
 					</div>
 					<div class="excellence__item flex-container">
 						<div class="excellence__img fcenter">
-							<img src="icons/choose/3.svg" />
+							<img src="icons/choose/3.svg" alt="choose3" />
 
 						</div>
 						<div class="excellence__text">
@@ -128,7 +128,7 @@
 					</div>
 					<div class="excellence__item flex-container">
 						<div class="excellence__img fcenter">
-							<img src="icons/choose/4.svg" />
+							<img src="icons/choose/4.svg" alt="choose4" />
 						</div>
 						<div class="excellence__text">
 							<h2 class="excellence__title subtitle">fits any size and budget</h2>
@@ -146,29 +146,28 @@
 				<div class="contact__items row">
 					<div class="contact__item flex-container">
 						<div class="contact__img">
-							<img src="icons/contacts/location.svg" />
+							<img src="icons/contacts/location.svg" alt="location" />
 						</div>
 						<div class="contact__text">45-35 #B 39th St, Sunnyside, NY 11104</div>
 					</div>
 					<div class="contact__item flex-container">
 						<div class="contact__img">
-							<img src="icons/contacts/email.svg" />
+							<img src="icons/contacts/email.svg" alt="email" />
 						</div>
 						<a href="mailto:contact@primeone.com" class="contact__link">contact@primeone.com</a>
 					</div>
 					<div class="contact__item flex-container">
 						<div class="contact__img">
-							<img src="icons/contacts/telephone.svg" />
-
+							<img src="icons/contacts/telephone.svg" alt="phone" />
 						</div>
 						<a href="tel:+7187777777" class="contact__link">(718) 777-7777</a>
 					</div>
 					<div class="contact__item">
 						<div class="contact__socials flex-container">
-							<a href="" class="contact__social"><i></i></a>
-							<a href="" class="contact__social"><i></i></a>
-							<a href="" class="contact__social"><i></i></a>
-							<a href="" class="contact__social"><i></i></a>
+							<a href="#" class="contact__social"><span class="icon-facebook"></span></a>
+							<a href="#" class="contact__social"><span class="icon-twitter"></a>
+							<a href="#" class="contact__social"><span class="icon-instagram"></a>
+							<a href="#" class="contact__social"><span class="icon-google"></a>
 						</div>
 					</div>
 				</div>
@@ -184,9 +183,9 @@
 				<div class="connection__item">
 					<div class="connection__block">
 						<h2 class="connection__title subtitle subtitle--white">get in touch</h2>
-						<form class="form column">
+						<form action="#" class="form column">
 							<input type="text" name="name" placeholder="Name" />
-							<input type="text" name=" email" placeholder="E-mail or phone number" />
+							<input type="text" name="email" placeholder="E-mail or phone number" />
 							<textarea name="message" placeholder="Your message"></textarea>
 							<button class="form__button button">Send message</button>
 						</form>
@@ -195,8 +194,25 @@
 			</div>
 		</section>
 	</main>
-
 	@@include('views/_footer.html')
+
+	<div class="modal">
+		<div class="modal__dialog">
+			<div class="modal__content">
+				<div data-close class="modal__close">&times;</div>
+				<div class="modal__title">Hello my friends</div>
+			</div>
+		</div>
+	</div>
+	<div class="loading">
+		<img src="icons/spinner.gif" alt="spinner" class="loading__spinner" />
+	</div>
+	<div class="preloader preloader--active">
+		<div class="preloader__spinner"></div>
+	</div>
+	<div class="up">
+		<img src="icons/up.png" alt="arrow up">
+	</div>
 	@@include('views/_scripts.html')
 </body>
 

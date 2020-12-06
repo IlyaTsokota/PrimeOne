@@ -9,7 +9,7 @@ function responsive() {
 			headerTop = document.querySelector('.header-top'),
 			headerColumn = document.querySelectorAll('.header-bottom__column');
 
-		let width = window.outerWidth;
+		let width = window.innerWidth;
 		if (width < 768) {
 			if (!headerMenu.classList.contains('done')) {
 				headerMenu.classList.add('done');

@@ -14,7 +14,14 @@
 		color: #fff;
 		font-size: 15px;
 		text-align: left;
+		&:focus {
+			border-color: #fff;
+		}
+		&.err {
+			border-color: tomato;
+		}
 	}
+
 	textarea {
 		resize: none;
 		margin-bottom: 25px;

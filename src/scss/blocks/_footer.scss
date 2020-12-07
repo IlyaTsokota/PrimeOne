@@ -1,6 +1,6 @@
 .footer {
 	&__content {
-		min-height: 125px;
+		height: 125px;
 		display: flex;
 		align-items: center;
 		@include _576 {
